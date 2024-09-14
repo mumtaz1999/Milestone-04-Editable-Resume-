@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editable Resume</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f9;
+      color: #5c0f0f;
+      margin: 0;
+      padding: 20px;
+    }
+    #resume {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #c5dfe4;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+    h3 {
+      font-size: 24px;
+      color: #3498db; 
+    }
+    p, h1, h2 {
+      font-size: 18px;
+      color: #e67e22;
+      margin-bottom: 10px;
+    }
+    h1 {
+      font-size: 32px;
+      color: #123c67;
+    }
+    .section {
+      margin-bottom: 20px;
+    }
+    .section:last-child {
+      margin-bottom: 0;
+    }
+    /* Editable Styles */
+    [contenteditable="true"] {
+      border: 1px dashed #ddd;
+      padding: 5px;
+      border-radius: 5px;
+      outline: none;
+    }
+    [contenteditable="true"]:hover {
+      border-color: #4CAF50;
+    }
+    
+    /* Email and Father's Name Specific Styles */
+    #email p, #father-name p {
+      font-weight: bold; /* Makes the email and father's name bolder */
+      color: #e67e22; /* Unique orange color for these fields */
+      padding: 8px;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    #email h2, #father-name h2 {
+      color: #3d9cdb; /* Blue color for the section headings */
+    }
+  </style>
+</head>
+<body>
+
+  <div id="resume">
+    <!-- Name Section -->
+    <div class="section" id="name">
+      <h1 contenteditable="true">Your Name</h1>
+    </div>
+
+    <!-- Email Section -->
+    <div class="section" id="email">
+      <h2 contenteditable="true">Email</h2>
+      <p contenteditable="true">your.email@example.com</p>
+    </div>
+
+    <!-- Father's Name Section -->
+    <div class="section" id="father-name">
+      <h2 contenteditable="true">Father's Name</h2>
+      <p contenteditable="true">John Doe</p>
+    </div>
+
+    <!-- Education Section -->
+    <div class="section" id="education">
+      <h3 contenteditable="true">Education</h3>
+      <p contenteditable="true">Bachelor of Science in Computer Science</p>
+    </div>
+
+    <!-- Work Experience Section -->
+    <div class="section" id="work-experience">
+      <h3 contenteditable="true">Work Experience</h3>
+      <p contenteditable="true">Software Developer at XYZ Corp</p>
+    </div>
+
+    <!-- Skills Section -->
+    <div class="section" id="skills">
+      <h3 contenteditable="true">Skills</h3>
+      <p contenteditable="true">JavaScript, TypeScript, HTML, CSS</p>
+    </div>
+    
+    <!-- Projects Section -->
+    <div class="section" id="projects">
+      <h3 contenteditable="true">Projects</h3>
+      <p contenteditable="true">E-commerce Website, Dynamic Resume Builder</p>
+    </div>
+  </div>
+
+</body>
+</html>
